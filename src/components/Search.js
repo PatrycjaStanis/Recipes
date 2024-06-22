@@ -8,7 +8,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 export function SearchBar({ setRecipes }) {
-  const [query, setQuery] = useState("chicken");
+  const [query, setQuery] = useState("");
 
   async function fetchRecipes() {
     const response = await fetch(

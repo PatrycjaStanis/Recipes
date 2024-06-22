@@ -3,12 +3,15 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Toolbar from "@mui/material/Toolbar";
+import mniam from "./mniam.PNG"
 
 export function Header() {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
+      <img src={mniam} className="App-mniam" alt="mniam" />
         <AppBar 
+        
           position="static" 
           sx={{ 
             background: 'linear-gradient(to right, #90EE90, #006400)',
