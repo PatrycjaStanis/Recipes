@@ -1,18 +1,26 @@
 import * as React from "react";
 import { useState } from "react";
 import { Header } from "./components/Header.js";
-import { SearchBar } from "./components/Search.js";
-import { RecipiesList } from "./components/Recipies.js";
+import { SearchBar } from "./components/SearchBar.js";
+import { SearchResults } from "./components/SearchResults.js";
+import { Filters } from "./components/Filters.js"; // Komponent filtrów
 import "./App.css";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
-  //console.log(recipes);
+  const [filteredRecipes, setFilteredRecipes] = useState([]); // Stan do przechowywania przefiltrowanych przepisów
+
+  // Funkcja przekazana do `Filters`, która aktualizuje przefiltrowane przepisy
+  const handleFilterChange = (filteredRecipes) => {
+    setFilteredRecipes(filteredRecipes);
+  };
+
   return (
     <div className="App">
-      <Header></Header>
+      <Header />
       <SearchBar setRecipes={setRecipes} />
-      <RecipiesList recipes={recipes} />
+      <Filters recipes={recipes} onFilterChange={handleFilterChange} />
+      <SearchResults filteredRecipes={filteredRecipes} />
     </div>
   );
 }

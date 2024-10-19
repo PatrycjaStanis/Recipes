@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';  
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Toolbar from "@mui/material/Toolbar";
 import mniam from "./mniam.PNG";
 
-export function Header() {
+export function AdminHeader1() {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -19,15 +19,15 @@ export function Header() {
             <img src={mniam} className="App-mniam" alt="mniam" />
           </Box>
 
-          {/* Napis "Moje konto" wyrównany do prawej */}
+          {/* Napis "Panel Administratora" wyrównany do prawej */}
           <Typography variant="h6" component="div">
-          <span>
-              <a href="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <b>Moje konto</b>
-              </a>
+            <span>
+              <b>Panel Administratora</b>
             </span>
           </Typography>
         </Box>
+
+        {/* Pasek "Przepisy" */}
         <AppBar
           position="static"
           sx={{
@@ -43,9 +43,31 @@ export function Header() {
             </Box>
           </Toolbar>
         </AppBar>
+
+        {/* Box "Powrót" po prawej stronie, 20px pod napisem "Przepisy" */}
+        <Box
+          display="flex"
+          justifyContent="flex-end"  // Umieszcza box "Powrót" po prawej stronie
+          marginTop={2}  // 20px odstępu od paska z napisem "Przepisy"
+          sx={{ gap: '20px', paddingRight: '20px' }}  // Dodanie odstępów po prawej
+        >
+
+          {/* Link "Powrót" w dużym boxie po prawej stronie */}
+          <Box sx={{ backgroundColor: '#90EE90', padding: '30px', width: '300px', textAlign: 'center', borderRadius: '10px' }}>
+            <Typography variant="h6" component="span" sx={{ color: '#006400' }}>
+              <a href="/AdminHome" style={{ textDecoration: 'none', color: '#006400' }}>
+                Powrót
+              </a>
+            </Typography>
+          </Box>
+
+        </Box>
       </Box>
     </>
   );
 }
 
-export default Header;
+export default AdminHeader1;
+
+
+

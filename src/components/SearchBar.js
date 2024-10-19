@@ -1,9 +1,8 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
-import { useState, useEffect } from "react";
 import { InputAdornment } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from "@mui/icons-material/Search";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
@@ -12,7 +11,7 @@ export function SearchBar({ setRecipes }) {
 
   async function fetchRecipes() {
     const response = await fetch(
-      `https://api.edamam.com/api/recipes/v2?q=${query}&type=public&app_id=91b52f1a&app_key=c27d69ab01451afaa002790887322087`,
+      `https://api.edamam.com/api/recipes/v2?q=${query}&type=public&app_id=91b52f1a&app_key=c27d69ab01451afaa002790887322087`
     );
     const data = await response.json();
     setRecipes(data.hits);
@@ -23,8 +22,8 @@ export function SearchBar({ setRecipes }) {
   }
 
   useEffect(() => {
-    fetchRecipes();
-  }, []);
+    if (query.length > 0) fetchRecipes();
+  }, [query]);
 
   return (
     <Box
@@ -32,8 +31,8 @@ export function SearchBar({ setRecipes }) {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      minHeight="100vh"
-      sx={{ marginTop: '-30vh' }} 
+      minHeight="50vh"
+      sx={{ marginBottom: '10px' }}  /* Dodajemy mniejszy margines */
     >
       <Typography
         variant="h4"
@@ -58,10 +57,12 @@ export function SearchBar({ setRecipes }) {
         onChange={handleChange}
         value={query}
         sx={{
-          width: "50%", 
-          backgroundColor: "#f0f0f0", 
+          width: "50%",
+          backgroundColor: "#f0f0f0",
         }}
       />
     </Box>
   );
 }
+
+export default SearchBar;

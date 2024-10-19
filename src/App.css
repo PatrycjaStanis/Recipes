@@ -25,3 +25,23 @@
     transform: rotate(360deg);
   }
 }
+
+.App-mniam {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.Filters {
+  margin-top: 10px; /* Zmniejszamy margines na górze dla filtrów */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Filters h6 {
+  margin-bottom: 10px;
+}
+
+.Filters .MuiSlider-root {
+  margin-top: 10px; /* Zmniejszamy margines między filtrami */
+}
