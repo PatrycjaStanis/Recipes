@@ -71,7 +71,7 @@ const RecipeAdd = () => {
           sx={{ marginBottom: '16px', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
         />
 
-        {/* Zmniejszone pole do przesyłania zdjęcia */}
+        {/* pole do przesyłania zdjęcia */}
         <Box
           display="flex"
           justifyContent="center"
@@ -107,7 +107,7 @@ const RecipeAdd = () => {
           />
         )}
 
-        {/* Wyśrodkowany przycisk Dodaj przepis */}
+        {/* przycisk Dodaj przepis */}
         <Box display="flex" justifyContent="center" alignItems="center">
           <Button type="submit" variant="contained" color="primary" sx={{ width: '100%' }}>
             Dodaj przepis

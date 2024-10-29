@@ -51,3 +51,5 @@ export function FilterOptions({ calories, setCalories, proteins, setProteins, nu
     </Box>
   );
 }
+
+export default FilterOptions;

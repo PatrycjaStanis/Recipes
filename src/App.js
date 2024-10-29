@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Header } from "./components/Header.js";
 import { SearchBar } from "./components/SearchBar.js";
 import { SearchResults } from "./components/SearchResults.js";
-import { Filters } from "./components/Filters.js"; // Komponent filtrów
+import { Filters } from "./components/Filters.js"; 
 import "./App.css";
 
 function App() {

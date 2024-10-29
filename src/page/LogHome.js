@@ -16,9 +16,9 @@ function LogHome() {
   return (
     <div>
       <LoggedHeader />
-      <SearchBar setRecipes={setRecipes} />  {/* Otrzymywanie przepisów z SearchBar */}
+      <SearchBar setRecipes={setRecipes} /> 
       <Filters recipes={recipes} onFilterChange={handleFilterChange} />
-      <SearchResults filteredRecipes={filteredRecipes} /> {/* Wyświetlenie przefiltrowanych wyników */}
+      <SearchResults filteredRecipes={filteredRecipes} /> 
     </div>
 
 );

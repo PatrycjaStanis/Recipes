@@ -32,7 +32,7 @@ export function SearchBar({ setRecipes }) {
       justifyContent="center"
       alignItems="center"
       minHeight="50vh"
-      sx={{ marginBottom: '10px' }}  /* Dodajemy mniejszy margines */
+      sx={{ marginBottom: '10px' }}  
     >
       <Typography
         variant="h4"

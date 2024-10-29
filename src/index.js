@@ -18,6 +18,8 @@ import Users from "./admin/Users";
 import FindRecipies from "./admin/FindRecipies";
 import AaddRecipe from "./admin/AaddRecipe";
 import AchangePass from "./admin/AchangePass";
+import Vege from "./page/Vege";
+import FavoritesU from "./page/FavoritesU";
 
 const themeOptions = {
   palette: {
@@ -96,6 +98,14 @@ const router = createBrowserRouter([
 {
   path: "AchangePass",
   element: <AchangePass/>
+},
+{
+  path: "Vege",
+  element: <Vege/>
+},
+{
+  path: "FavoritesU",
+  element: <FavoritesU/>
 },
 ]);
 

@@ -1,82 +1,57 @@
-import React from 'react';
+import React from 'react'; 
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Toolbar from "@mui/material/Toolbar";
 import mniam from "./mniam.PNG";
+import './LoggedHeader.css'; 
 
 export function LoggedHeader() {
   return (
-    <>
-      <Box sx={{ flexGrow: 1 }}>
-        <Box display="flex" alignItems="center" justifyContent="center" padding={2}>
-          
-          {/* Logo "mniam" wyśrodkowane względem strony */}
-          <Box sx={{ display: "flex", justifyContent: "center", flexGrow: 1 }}>
-            <img src={mniam} className="App-mniam" alt="mniam" />
-          </Box>
+    <div className="logged-header-container">
+      <Box className="logged-header-top">
+        <Box className="logged-header-left" />
+        
+        <Box className="logged-header-center">
+          <img src={mniam} className="header-logo" alt="mniam" />
         </Box>
 
-        {/* Pasek "Przepisy" */}
-        <AppBar
-          position="static"
-          sx={{
-            background: 'linear-gradient(to right, #90EE90, #006400)',
-            textAlign: 'center',
-          }}
-        >
-          <Toolbar>
-            <Box sx={{ width: '100%' }}>
-              <Typography variant="h4" component="div" sx={{ margin: 'auto' }}>
-                Przepisy
-              </Typography>
-            </Box>
-          </Toolbar>
-        </AppBar>
-
-        {/* Napisy "Dodaj przepis", "Zmień hasło" i "Wyloguj" po prawej stronie */}
-        <Box
-          display="flex"
-          justifyContent="flex-end"  // Ustawienie elementów po prawej
-          alignItems="center"
-          marginTop={2}
-          sx={{ gap: '20px', paddingRight: '20px' }}  // Dodanie marginesu z prawej strony
-        >
-
-          {/* Link "Wyszyukiwanie przepisów" */}
-          <Typography variant="h6" component="span" sx={{ color: '#006400' }}>
-            <a href="/LogHome" style={{ textDecoration: 'none', color: '#006400' }}>
-              Znajdz przepis
-            </a>
-          </Typography>
-
-
-          {/* Link "Dodaj przepis" */}
-          <Typography variant="h6" component="span" sx={{ color: '#006400' }}>
-            <a href="/AddRecipe" style={{ textDecoration: 'none', color: '#006400' }}>
-              Dodaj przepis
-            </a>
-          </Typography>
-
-          {/* Link "Zmień hasło" */}
-          <Typography variant="h6" component="span" sx={{ color: '#006400' }}>
-            <a href="/ChangePass" style={{ textDecoration: 'none', color: '#006400' }}>
-              Zmień hasło
-            </a>
-          </Typography>
-
-          {/* Link "Wyloguj" */}
-          <Typography variant="h6" component="span" sx={{ color: '#006400' }}>
-            <a href="/logout" style={{ textDecoration: 'none', color: '#006400' }}>
-              Wyloguj
-            </a>
-          </Typography>
-        </Box>
+        <Box className="logged-header-right" />
       </Box>
-    </>
+
+      <AppBar position="static" className="app-bar">
+        <Toolbar>
+          <Box className="app-bar-content">
+            <Typography variant="h4" component="div">
+              Przepisy
+            </Typography>
+          </Box>
+        </Toolbar>
+      </AppBar>
+
+      <Box className="header-links">
+        <Typography variant="h6" component="span" className="link-text">
+          <a href="/LogHome" className="link">Znajdź przepis</a>
+        </Typography>
+
+        <Typography variant="h6" component="span" className="link-text">
+          <a href="/FavoritesU" className="link">Ulubione przepisy</a>
+        </Typography>
+
+        <Typography variant="h6" component="span" className="link-text">
+          <a href="/AddRecipe" className="link">Dodaj przepis</a>
+        </Typography>
+
+        <Typography variant="h6" component="span" className="link-text">
+          <a href="/ChangePass" className="link">Zmień hasło</a>
+        </Typography>
+
+        <Typography variant="h6" component="span" className="link-text">
+          <a href="/logout" className="link">Wyloguj</a>
+        </Typography>
+      </Box>
+    </div>
   );
 }
 
 export default LoggedHeader;
-
-

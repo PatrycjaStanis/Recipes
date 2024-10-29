@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AdminHeader1 from '../components/AdminHeader1.js'; 
 import SearchBar from '../components/SearchBar.js';
 import Filters from '../components/Filters.js';
-import { SearchResults } from "../components/SearchResults.js";
+import { AdminSearchresults } from '../components/AdminSearchresults.js';
 
 function FindRecipies() {
   const [recipes, setRecipes] = useState([]); // Przechowuje wszystkie przepisy
@@ -18,7 +18,7 @@ function FindRecipies() {
       <AdminHeader1 />
       <SearchBar setRecipes={setRecipes} />  {/* Otrzymywanie przepisów z SearchBar */}
       <Filters recipes={recipes} onFilterChange={handleFilterChange} />
-      <SearchResults filteredRecipes={filteredRecipes} /> {/* Wyświetlenie przefiltrowanych wyników */}
+      <AdminSearchresults filteredRecipes={filteredRecipes} /> {/* Wyświetlenie przefiltrowanych wyników */}
     </div>
 
 );

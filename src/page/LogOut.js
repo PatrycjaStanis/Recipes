@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react'; 
-import { useNavigate } from 'react-router-dom'; // Hook do nawigacji
-//import {App} from './App'; 
+import { useNavigate } from 'react-router-dom'; 
 
 const Logout = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Wylogowanie użytkownika - tutaj możesz wyczyścić dane sesji, tokeny itp.
+    // Wylogowanie użytkownika 
     localStorage.removeItem('authToken'); // Przykład usunięcia tokena
-    sessionStorage.clear(); // Czyszczenie sesji (opcjonalnie)
+    sessionStorage.clear(); // Czyszczenie sesji 
 
     // Po wylogowaniu przekieruj użytkownika na stronę główną
     navigate('/'); // Zmieniono ścieżkę na stronę główną

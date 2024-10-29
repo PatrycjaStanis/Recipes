@@ -1,33 +1,32 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importuj useNavigate z react-router-dom
-import './ChangePass.css'; // Utwórz nowy plik CSS do stylizacji
+import { useNavigate } from 'react-router-dom'; 
+import './ChangePass.css'; 
 import LoggedHeader from '../components/LoggedHeader';
 
 function ChangePass() {
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const navigate = useNavigate(); // Użyj useNavigate do nawigacji
+  const navigate = useNavigate(); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Walidacja, np. czy nowe hasło i potwierdzenie są takie same
+    // walidacja
     if (newPassword !== confirmPassword) {
       alert('Nowe hasło i potwierdzenie hasła muszą być takie same.');
       return;
     }
 
-    // Logika zmiany hasła (możesz dodać wywołanie API)
+    // Logika zmiany hasła 
     console.log('Zmiana hasła:', { currentPassword, newPassword });
 
-    // Po udanej zmianie hasła, możesz przekierować użytkownika np. na stronę logowania
-    navigate('/LogHome'); // Ścieżka musi być zgodna z konfiguracją routingu
+    // Po udanej zmianie hasła, przekierowanie użytkownika stronę 
+    navigate('/LogHome'); 
   };
 
   return (
     <div>
-      {/* Wyświetl LogHeader nad formularzem */}
       <LoggedHeader />
 
       {/* Formularz zmiany hasła */}

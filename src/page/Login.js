@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importuj useNavigate z react-router-dom
+import { useNavigate } from 'react-router-dom'; 
 import './Login.css';
-import LogHeader from '../components/LogHeader'; // Importuj LogHeader
+import LogHeader from '../components/LogHeader'; 
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -23,14 +23,13 @@ function Login() {
       // Przekierowanie na stronę LogHome
       navigate('/LogHome');
     } else {
-      // Jeśli dane są nieprawidłowe, wyświetl alert (lub możesz dodać bardziej zaawansowaną walidację)
+      // Jeśli dane są nieprawidłowe, wyświetl alert 
       alert('Nieprawidłowy email lub hasło');
     }
   };
 
   return (
     <div>
-      {/* Wyświetl LogHeader nad formularzem */}
       <LogHeader />
 
       {/* Formularz logowania */}
@@ -60,7 +59,7 @@ function Login() {
           <button type="submit">Zaloguj się</button>
         </form>
 
-        {/* Link do rejestracji, bez pogrubienia */}
+        {/* Link do rejestracji */}
         <a href="/Registration" className="registration-link">
           Nie posiadasz jeszcze konta? Zarejestruj się
         </a>

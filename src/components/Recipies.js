@@ -139,3 +139,5 @@ export const RecipiesList = ({ recipes }) => {
     </>
   );
 };
+
+export default RecipiesList;
