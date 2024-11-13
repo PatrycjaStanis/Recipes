@@ -1,0 +1,60 @@
+/* Ogólny kontener */
+.logged-header-container {
+    flex-grow: 1;
+}
+
+/* Wyśrodkowanie obrazka */
+.logged-header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Wyrównanie do boków */
+    padding: 16px;
+}
+
+/* Wyśrodkowanie obrazka */
+.logged-header-left, .logged-header-right {
+    flex-grow: 1;
+}
+
+/* Wyśrodkowanie obrazka */
+.logged-header-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.header-logo {
+    max-width: 350px; 
+}
+
+/* AppBar styl */
+.app-bar {
+    background: linear-gradient(to right, #90EE90, #006400);
+    text-align: center;
+}
+
+.app-bar-content {
+    width: 100%;
+    text-align: center;
+}
+
+/* Linki */
+.header-links {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    margin-top: 16px;
+    padding-right: 20px;
+    gap: 20px;
+}
+
+.link-text {
+    color: #006400;
+}
+
+.link {
+    text-decoration: none;
+    color: #006400;
+}
+
+  

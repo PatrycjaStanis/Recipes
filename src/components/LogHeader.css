@@ -1,0 +1,43 @@
+/* Ogólny kontener */
+.logheader-container {
+    flex-grow: 1;
+}
+
+/* Wyśrodkowanie obrazka */
+.logheader-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+/* Lewa i prawa sekcja do wyrównania */
+.logheader-left, .logheader-right {
+    flex-grow: 1;
+}
+
+/* Wyśrodkowanie obrazka */
+.logheader-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.logheader-logo {
+    max-width: 350px;
+}
+
+/* AppBar styl */
+.app-bar {
+    background: linear-gradient(to right, #90EE90, #006400);
+    text-align: center;
+}
+
+.app-bar-title {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+
+  

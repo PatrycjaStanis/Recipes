@@ -1,0 +1,64 @@
+.header-container {
+    flex-grow: 1;
+  }
+  
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  
+  .header-left {
+    flex-grow: 1;
+  }
+  
+  .header-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: -700px;
+  }
+  
+  .header-image {
+    max-width: 350px;
+  }
+  
+  .header-right {
+    text-align: right;
+  }
+  
+  .app-bar {
+    background: linear-gradient( #90EE90, #006400);
+    text-align: center;
+    margin-top: 20px; /* Spójna odległość nad paskiem */
+  }
+  
+  .app-bar-content {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .link-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px; 
+    gap: 20px;
+    padding-right: 20px;
+  }
+  
+  .link-box {
+    background-color: #90EE90;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .link-text {
+    text-decoration: none;
+    color: #006400;
+    font-weight: bold;
+  }
+  
